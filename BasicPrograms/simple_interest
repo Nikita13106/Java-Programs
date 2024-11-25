@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class simple_interest {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter principal");
+		int p=sc.nextInt();
+		System.out.println("enter time in years");
+		int t=sc.nextInt();
+		System.out.println("enter rate of interest per annum");
+		double r=sc.nextDouble();
+		double si=(p*t*r)/100;
+		System.out.println("SIMPLE INTEREST IS: " +si);
+	}
+}
