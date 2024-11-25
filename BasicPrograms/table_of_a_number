@@ -1,3 +1,4 @@
+// take a number as input and print the multiplication table for it
 import java.util.Scanner;
 public class table_of_a_number {
 	public static void main(String[] args) {
