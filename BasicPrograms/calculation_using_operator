@@ -1,0 +1,32 @@
+//take in two numbers and an operator(+,-,*,/) and calculate the value(using if conditions)
+import java.util.Scanner;
+public class operators {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter two numbers");
+		double num1=sc.nextDouble();
+		double num2=sc.nextDouble();
+		System.out.println("enter any operator(+,-,*,/)");
+		String op=sc.next();
+		if(op.equals("+")) {
+			double sum=num1+num2;
+			System.out.println("the sum of the two numbers : " +sum);
+		}
+		else if(op.equals("-")) {
+			double sub=num1-num2;
+			System.out.println("the subtraction of the two numbers : " +sub);
+		}
+		else if(op.equals("*")) {
+			double mul=num1*num2;
+			System.out.println("the multiplication of the two numbers : " +mul);
+		}
+		else if(op.equals("/")) {
+			double div=num1/num2;
+			System.out.println("the division of the two numbers : " +div);
+		}
+		else {
+			System.out.println("invalid operator");
+		}
+	}
+
+}
