@@ -1,0 +1,12 @@
+//INPUT CURRENCY IN RUPEES AND OUTPUT IN USD
+import java.util.Scanner;
+public class rupee_to_USD {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter currency in rupees ");
+		int rup=sc.nextInt();
+		double usd=rup*0.01187;  //logic of converting rupees to us dollars as 1 rupees=0.01187 dollars
+		System.out.println("in USD it is: "+usd);
+	}
+
+}
