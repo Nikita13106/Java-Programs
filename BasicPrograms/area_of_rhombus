@@ -1,0 +1,15 @@
+// AREA OF RHOMBUS PROGRAM
+import java.util.Scanner;
+public class area_of_rhombus {
+	public static void main(String[] args) {
+	 Scanner sc=new Scanner(System.in);
+	 System.out.println("Enter the length of both the diagonals:");
+	 double d1=sc.nextDouble();
+	 double d2=sc.nextDouble();
+	 double area=0.5*d1*d2;
+	 System.out.println("area of rhombus: " +area);
+	}
+}
+
+
+
