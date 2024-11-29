@@ -1,0 +1,16 @@
+// AREA OF EQUILATERAL PROGRAM
+import java.util.Scanner;
+public class area_of_equilateral_triangle {
+		public static void main(String[] args) {
+		 Scanner sc=new Scanner(System.in);
+		 System.out.println("Enter the length of a side:");
+		 double s=sc.nextDouble();
+		 double area=(0.5*s*((Math.sqrt(3)*s)/2));
+		 System.out.println("area of equilateral triangle: " +area);
+		}
+	}
+
+
+
+
+
