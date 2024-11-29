@@ -1,0 +1,12 @@
+// AREA OF ISOSCELES TRIANGLE PROGRAM
+import java.util.Scanner;
+public class area_of_isosceles {
+			public static void main(String[] args) {
+				Scanner sc=new Scanner(System.in);
+				System.out.println("Enter the base and length of side:");
+				double b=sc.nextDouble();
+				double l=sc.nextDouble();
+				double area= 0.5*b*Math.sqrt((l*l)-((b*b)/4));
+				System.out.println("area of isosceles triangle: " +area);
+		}
+}
