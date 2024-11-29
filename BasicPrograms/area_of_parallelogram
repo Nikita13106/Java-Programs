@@ -1,0 +1,13 @@
+// AREA OF PARALLELOGRAM PROGRAM
+import java.util.Scanner;
+public class area_of_parallelogram {
+			public static void main(String[] args) {
+				Scanner sc=new Scanner(System.in);
+				System.out.println("Enter the base and height:");
+				double b=sc.nextDouble();
+				double h=sc.nextDouble();
+				double area=b*h;
+				System.out.println("area of parallelogram: " +area);
+		}
+}
+
