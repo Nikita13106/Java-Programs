@@ -1,0 +1,21 @@
+//TAKE INTEGER INPUTS TILL THE USER ENTERS 0 AND PRINT THE LARGEST NUMB ER FROM ALL.
+import java.util.Scanner;
+public class input_till_0_and_largest_number {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter as many as you want and for stop enter 0");
+		int a=sc.nextInt();
+		int max=a;
+		while(true) {
+			int n=sc.nextInt();
+			if(n==0) {
+				break;
+			}
+			if(n>a) {
+				max=n;
+			}
+		}
+		System.out.println("the largest number is: " + max);
+	}
+
+}
