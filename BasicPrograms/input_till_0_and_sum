@@ -1,0 +1,21 @@
+//TAKE INTEGER INPUTS TILL THE USER ENTERS O AND PRINT THE SUM OF ALL NUMBERS
+import java.util.ArrayList;
+import java.util.Scanner;
+public class input_till_0_and_sum {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		 int sum=0;
+		System.out.println("enter as many numbers as you want and stop by typing 0");
+		while(true) {
+		    int n=sc.nextInt();
+		    if(n==0) {
+		    	break;
+		    }
+		    sum+=n;
+	    }
+		System.out.println("Sum is "+sum);
+	}	
+}
+	    
+
+
