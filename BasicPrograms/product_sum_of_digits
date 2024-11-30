@@ -1,0 +1,20 @@
+//SUBTRACT THE PRODUCT AND SUM OF DIGITS OF AN INTEGER
+import java.util.Scanner;
+public class product_sum_of_digits {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter any number");
+		int num=sc.nextInt();
+		int product=1;
+		int sum=0;
+		while(num>0) {
+			int dig=num%10;
+			num=num/10;
+			sum+=dig;
+			product*=dig;
+		}
+		int sub=sum-product;
+		System.out.println("the subtraction of sum and product: " +sub);
+	}
+
+}
