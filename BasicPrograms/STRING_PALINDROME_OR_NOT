@@ -1,0 +1,32 @@
+//to check whether the string is palindrome or not
+import java.util.Arrays;
+import java.util.Scanner;
+public class palindrome {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ENTER A NAME");
+		String name=sc.next();
+		char[]arr=name.toCharArray();
+		//printing the name 
+		System.out.println("THE NAME YOU ENTERED IS:");
+		for(int i=0;i<name.length();i++) {
+			System.out.print(arr[i]);
+		}
+		//printing the name in reverse
+		System.out.println("\nTHE NAME IN REVERSE: ");
+		String reverse="";
+		for(int j=name.length()-1;j>=0;j--) {
+			reverse+=arr[j];
+		}
+		System.out.println(reverse);
+
+		if(name.equalsIgnoreCase(reverse)) {
+			System.out.println("THE NAME IS PALINDROME");
+		}
+		else {
+			System.out.println("THE NAME IS NOT PALINDROME");
+		}
+		
+	}
+
+}
