@@ -1,0 +1,25 @@
+//to find average of N numbers
+import java.util.Scanner;
+public class average_of_N_numbers {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+			double sum=0;
+			System.out.println("ENTER N NUMBERS (stop by entering 0):");
+			int count=0;
+			int n;
+			do { 
+				n=sc.nextInt();
+				if(n!=0) {
+				count++;
+				sum+=n;}
+			}
+			while(n!=0);
+			
+			double avg=sum/count;
+			System.out.println("THE AVERAGE IS: "+avg);
+		}
+	}
+		
+	
+
+
