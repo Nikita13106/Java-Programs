@@ -1,0 +1,17 @@
+//to print sum of all the digits of a number
+import java.util.Scanner;
+public class sum_of_digits_of_number {
+	public static void main(String[] args) {
+			Scanner sc=new a(System.in);
+			int sum=0;
+			System.out.println("ENTER A NUMBER");
+			int num=sc.nextInt();
+while(num>0) {
+	int last_digit=num%10;
+	num=num/10;
+	sum+=last_digit;
+}
+System.out.println(sum);
+	}
+
+}
