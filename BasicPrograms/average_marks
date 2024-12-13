@@ -1,0 +1,17 @@
+//to find average marks
+import java.util.Scanner;
+public class average_marks {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int sum=0;
+		System.out.println("HOW MANHY SUBJECTS DO YOU HAVE");
+		int sub=sc.nextInt();
+		System.out.println("ENTER YOUR MARKS");
+		for(int i=1;i<=sub;i++) {
+				int marks=sc.nextInt();
+				sum+=marks;
+		}
+		System.out.println("YOUR AVERAGE MARKS ARE :"+sum/sub );
+	}
+
+}
