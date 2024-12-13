@@ -1,0 +1,15 @@
+// NIKITA IS ALLOWED TO GO OUT WITH HER FRIENDS ONLY ON THE EVEN DAYS OF A GIVEN MONTH.WRITE A PROGRAM TO COUNT THE NUMBER OF DAYS SHE CAN GO OUT IN THE MONTH OF AUGUST
+import java.util.Scanner;
+public class even_days_in_august {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int count=0;
+		for(int i=1;i<=31;i++) {
+			if(i%2==0) {
+				count++;
+			}
+		}
+		System.out.println("THE NUMBER OF DAYS SHE CAN GO OUT IS :" +count);
+	}
+
+}
