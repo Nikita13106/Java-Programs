@@ -1,0 +1,17 @@
+// sum of N numbers
+import java.util.Scanner;
+public class sum_of_N_numbers {
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		int sum=0;
+		System.out.println("HOW MANY NUMBERS ARE YOU GOING TO ENTER");
+		int n=sc.nextInt();
+		System.out.println("ENTER THE NUMBERS");
+		for(int i=1;i<=n;i++) {
+			double num=sc.nextDouble();
+			sum+=num;
+		}
+		System.out.println("THE SUM OF ALL THE NUMBERS ARE: "+sum);
+		}
+
+}
