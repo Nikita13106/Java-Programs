@@ -1,0 +1,30 @@
+// FIND THE INDEX OF THE TARGET IN AN ARRAY
+import java.util.Scanner;
+public class linear_search {
+	
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ENTER THE ELEMENTS OF ARRAY");
+		int[] arr=new int[5];
+		for(int i=0;i<arr.length;i++) {
+			arr[i]=sc.nextInt();
+		}
+		System.out.println("ENTER THE TARGET");
+		int target=sc.nextInt();
+        int ans=search(arr,target);
+        System.out.println("THE TARGET ELEMENT IS AT INDEX: "+ans);
+	}
+//FUNCTION TO RETURN INDEX OF TARGET
+ static int search(int[]arr,int target) {
+		if(arr.length==0) {
+			return -1;
+		}
+	for(int i=0;i<arr.length;i++) {
+		if(target==arr[i]) {
+			return i;
+		}
+	}
+	return -1;
+	}
+
+}
