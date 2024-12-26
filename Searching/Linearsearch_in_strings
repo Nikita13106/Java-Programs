@@ -1,0 +1,23 @@
+// TO FIND THE INDEX OF THE CHARACTER TAKEN AS INPUT FROM A STRING
+import java.util.Scanner;
+public class linearsearch_in_strings {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ENTER YOUR NAME");
+		String name=sc.next();
+		System.out.println("ENTER TARGET");
+		char target=sc.next().charAt(0);
+		System.out.println("THE INDEX AT WHICH THE TARGET IS: "+search(name,target));
+	}
+
+// FUNCTION TO RETURN THE INDEX OF THE TARGET
+static int search(String name,char target) {
+		for(int i=0;i<name.length();i++) {
+			if(target==name.charAt(i)) {
+				return i;
+			}
+		}
+		return -1;
+	}
+
+}
