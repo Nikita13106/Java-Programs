@@ -1,0 +1,30 @@
+// to find target in a given range
+import java.util.Scanner;
+public class Ls_in_range {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int start=2;
+		int end=4;
+	    System.out.println("Enter 5 elements of array");
+	    int[] arr=new int[5];
+// taking the elements of array
+	    for(int i=0;i<arr.length;i++) {
+	    	arr[i]=sc.nextInt();
+	    }
+	    System.out.println("ENTER THE TARGET");
+	    int target=sc.nextInt();
+// calling the function and storing its value in ans
+	    int ans=search(arr,target,start,end);
+	    System.out.println(ans);;
+	}
+// function to return the index of thr target , if not found return -1
+	static int search(int[] arr,int target,int start,int end) {
+		for(int i=start;i<=end;i++) {
+			if(arr[i]==target) {
+				return i;
+			}
+		}
+		return -1;
+	}
+
+}
