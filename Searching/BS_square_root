@@ -1,4 +1,5 @@
 //write a program to find the square root of a given non negative integer . if target is not a perfect square,return the floor value of its square root.Use binary search to attain O(logN) complexity
+//USING SQRT FUNCTION
 import java.util.Scanner;
 public class bs_sqrt {
 	public static void main(String[] args) {
@@ -27,3 +28,32 @@ static int floor(int target) {
 	 return end;
 }
 }
+//WITHOUT USING SQRT FUNCTION
+import java.util.Scanner;
+public class bs_sqrt {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter a number: ");
+		int target=sc.nextInt();
+		int ans=floor(target);
+		System.out.println(ans);
+	}
+static int floor(int target) {
+	 int start=0;
+	 int end=target;
+	 while(start<=end) {
+		 int mid=start+(end-start)/2;
+		 if(mid*mid==target) {
+			 return mid;
+		 }
+		 else if(mid*mid<target) {
+			 start=mid+1;
+		 }
+		 else {
+			 end=mid-1;
+		 }
+	 }
+	 return end;
+}
+}
+
