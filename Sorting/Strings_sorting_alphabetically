@@ -1,0 +1,35 @@
+import java.util.Arrays;
+public class Strings_sorting_alphabetically {
+	public static void main(String[] args) {
+		String[] arr= {"apple","orangs","orange","banana"};
+		swap(arr);
+	}
+	static void swap(String[] arr) {
+		for(int i=0;i<arr.length;i++) {
+			for(int j=1;j<arr.length-i;j++) {
+				int minlength=Math.min(arr[j-1].length(),arr[j].length());
+				boolean swapped=false;
+				 // Compare character by character
+				for(int k=0;k<minlength;k++) {
+					if(arr[j-1].charAt(k)>arr[j].charAt(k)) {
+						String temp=arr[j-1];
+						arr[j-1]=arr[j];
+						arr[j]=temp;
+						swapped=true;
+					}
+					else {
+						break;
+					}
+				}
+				// If all characters are equal up to the length of the shorter string, compare lengths
+				if(!swapped && arr[j-1].length()>arr[j].length()) {
+					 // Swap if arr[j-1] is longer than arr[j] (both strings are equal up to the shorter string's length)
+					String temp=arr[j-1];
+					arr[j-1]=arr[j];
+					arr[j]=temp;
+					}
+				}
+	}
+		System.out.println(Arrays.toString(arr));
+	}
+}
