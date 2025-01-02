@@ -1,0 +1,24 @@
+//SORT AN ARRAY USING BUBBLE SORT AND PRINT THE NUMBER OF SWAPS DURING THE SORT PROCESS
+import java.util.Arrays;
+import java.util.Scanner;
+public class count_of_swaps_in_bubblesort {
+	public static void main(String[] args) {
+		int[] arr= {3,7,5,8,6,4,9};
+		swap(arr);
+	}
+    static void swap(int[] arr) {
+    	int count=0;
+    	for(int i=0;i<arr.length;i++) {
+    		for(int j=1;j<arr.length-i;j++) {
+    			if(arr[j-1]>arr[j]) {
+    				count++;
+    				int temp=arr[j-1];
+    				arr[j-1]=arr[j];
+    				arr[j]=temp;
+    			}
+    		}
+    	}
+    	System.out.println(Arrays.toString(arr));
+    	System.out.println("THE COUNT OF SWAPS IS; "+count);
+    }
+}
