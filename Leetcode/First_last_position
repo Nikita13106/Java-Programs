@@ -1,0 +1,35 @@
+//using binary search to find the first and last index of the target element
+import java.util.Scanner;
+public class first_last_position {
+	public static void main(String[] args) {
+		int[] nums= {2,4,6,6,6,6,7,7,8};
+		int target=6 ;
+    int[] ans={-1,-1};
+		ans[0]=search1(nums,target,true);//first position 
+		ans[1]=search1(nums,target,false);//last position
+		System.out.println(ans);
+		}
+	static int search1(int[] nums,int target,boolean first_position) {
+		int result=-1;
+		int start=0;
+		int end=nums.length-1;
+		while(start<=end) {
+		int mid=start+(end-start/2);
+		if(target<nums[mid]) {
+			end=mid-1;
+		}
+		else if(target>nums[mid] ) {
+			start=mid+1;
+		}
+		else {
+			result=mid;
+			if(first_position==true) {   //first occurence of target
+			end=mid-1;}
+			else if(first_position==false) {  //last occurence of target
+				start=mid+1;
+			}
+		}
+		}
+		return result;
+	}
+}
