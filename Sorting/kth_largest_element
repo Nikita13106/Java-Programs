@@ -1,0 +1,28 @@
+//use bubble sort to find the Kth largest element in an array(k is the pass number)
+import java.util.Arrays;
+public class kth_largest_element {
+	public static void main(String[] args) {
+		int[] arr= {4,6,2,1,9,5};
+		int k=1;
+		swap(arr,k);
+	}
+	static void swap(int[] arr,int k) {
+		int result=0;
+		if(k!=0&&k<=arr.length) {
+		for(int i=0;i<k;i++) {
+			for(int j=1;j<arr.length-i;j++) {
+				if(arr[j-1]>arr[j]) {
+					int temp=arr[j-1];
+					arr[j-1]=arr[j];
+					arr[j]=temp;
+					result=arr[j];  //the last j index will be at the largest element of the pass number
+				}
+			}
+		}
+		System.out.println(result);
+		}
+		else {
+			System.out.println("TRY AGAIN AND THIS TIME ENTER A VALID PASS NUMBER");
+		}
+	}
+}
