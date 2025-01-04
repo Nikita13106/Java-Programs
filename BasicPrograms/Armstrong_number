@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Armstrong {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ENTER A NUMBER: ");
+		double num=sc.nextDouble();
+		int count=0;
+		int pow=count(num,count);
+		if(ans(num,pow)==num) {
+			System.out.println("IT IS AN ARMSTRONG NUMBER");
+		}
+		else {
+			System.out.println("IT IS NOT AN ARMSTRONG NUMBER");
+		}
+	}
+		static int count(double num,int count) {
+        while(num>0) {
+        	double rem=num%10;
+        	num=num/10;
+            count++;
+        }
+		return count;
+	}
+		static int ans(double num,int pow) {
+			int sum=0;
+	        while(num>0) {
+	        	double rem=num%10;
+	        	num=num/10;
+	            sum+=Math.pow(rem,pow);
+	        }
+			return sum;
+		}
+}
