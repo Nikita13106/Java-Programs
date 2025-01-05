@@ -11,14 +11,14 @@ public class Strings_sorting_alphabetically {
 				boolean swapped=false;
 				 // Compare character by character
 				for(int k=0;k<minlength;k++) {
-					if(arr[j-1].charAt(k)>arr[j].charAt(k)) {
+					if(arr[j-1].charAt(k)>arr[j].charAt(k)) {   // swap only if arr[j-1].charAt(k)>arr[j].charAt(k)
 						String temp=arr[j-1];
 						arr[j-1]=arr[j];
 						arr[j]=temp;
 						swapped=true;
 					}
 					else {
-						break;
+						break;   // as element is sorted correctly so it will iterate j to the next index
 					}
 				}
 				// If all characters are equal up to the length of the shorter string, compare lengths
