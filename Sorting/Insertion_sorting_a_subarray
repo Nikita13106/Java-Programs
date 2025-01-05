@@ -1,0 +1,23 @@
+// GIVEN AN ARRAY,SORT ONLY THE SUBARRAY FROM INDEX 1 TO 4,LEAVE THE REST OF THE ARRAY UNTOUCHED AND PRINT THR RESULT
+import java.util.Arrays;
+public class Insertion_sorting_a_subarray {
+   public static void main(String[] args) {
+	   int[] arr= {12,9,6,4,10,15};
+	   sort(arr);
+   }
+   static void sort(int[] arr) {
+	   for(int i=1;i<5;i++) {
+		   for(int j=i+1;j>1;j--) {  //j>1 as we have to sort from index 1 so no need check index less than 2
+			   if(arr[j]<arr[j-1]) {
+				   int temp=arr[j-1];
+				   arr[j-1]=arr[j];
+				   arr[j]=temp;
+			   }
+			   else {
+				   break;
+			   }
+		   }
+	   }
+	   System.out.println(Arrays.toString(arr));
+   }
+}
