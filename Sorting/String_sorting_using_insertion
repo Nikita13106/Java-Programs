@@ -1,0 +1,33 @@
+// ALMOST SAME AS THE Strings_sorting_alphabetically PROGRAM,REFER FOR COMMENTS IN THAT PROGRAM
+import java.util.Arrays;
+public class String_sorting_using_insertion {
+   public static void main(String[] args) {
+	   String[] arr= {"apple","banana","grape","cherry","date"};
+	   sort(arr);
+   }
+   static void sort(String[] arr) {
+	   boolean swapped=false;
+	   for(int i=0;i<arr.length-1;i++) {
+		   for(int j=i+1;j>0;j--) {
+			   for(int k=0;k<Math.min(arr[j-1].length(),arr[j].length());k++) {
+				   if(arr[j].charAt(k)<arr[j-1].charAt(k)) {
+					   String temp=arr[j-1];
+					   arr[j-1]=arr[j];
+					   arr[j]=temp;
+					   swapped=true;
+			   }
+				   else {
+					   break;
+				   }
+			   if(!swapped && arr[j].length()<arr[j-1].length()) {
+				   String temp=arr[j-1];
+				   arr[j-1]=arr[j];
+				   arr[j]=temp;
+			   }
+			   }
+		   }
+	   }
+	   System.out.println(Arrays.toString(arr));
+   }
+  
+ }
