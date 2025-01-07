@@ -1,0 +1,47 @@
+https://leetcode.com/problems/set-matrix-zeroes/description/
+import java.util.Arrays;
+import java.util.Scanner;
+public class set_matrix_zeroes {
+     public static void main(String[] args) {
+    	 Scanner sc=new Scanner(System.in);
+    	 System.out.println("ENTER THE NUMBER OF TEST CASES");
+    	 int num=sc.nextInt();
+    	 while(num>0) {
+    		 System.out.println("ENTER THE NUMBERS OF ROWS AND COLUMNS");
+        	 int m=sc.nextInt();
+        	 int n=sc.nextInt();
+        	 System.out.println("ENTER THE ELEMENTS OF ARRAY");
+        	 int[][] arr=new int[m][n];
+        	 int[][]result=new int[m][n]; //taking another array so that all the changes occur in this one
+        	 for(int i=0;i<m;i++) {
+        		 for(int j=0;j<n;j++) {
+        		 arr[i][j]=sc.nextInt();
+        		 result[i][j]=arr[i][j];  //copying all the elements of arr into result array and it will change only when element in arr is 0
+        	 }
+    	 }
+    		 for(int i=0;i<m;i++) {
+        		 for(int j=0;j<n;j++) {
+        		 if(arr[i][j]==0) {
+        		   rowzero(i,n,result);
+        		   colzero(j,m,result);
+        		 }
+        		 }
+        	 }
+    		 num--;
+    	 System.out.println(Arrays.deepToString(result)); //printing the updated array
+     }
+     }
+     static void rowzero(int i,int n,int[][]result ) {
+    	 int k=i;
+    	 for(int j=0;j<n;j++) {
+    		 result[k][j]=0;  //changes will happen in result array so arr is not changed and the iteration continues of finding zeroes in arr
+    	 }
+     }
+     static void colzero(int j,int m,int[][]result ) {
+    	 int k=j;
+    	 for(int i=0;i<m;i++) {
+    		 result[i][k]=0;
+    	 }
+     }
+}
+
