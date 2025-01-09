@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Recursion_sum_of_digits {
+	public static void main(String[] args) {
+		Scanner sc= new Scanner (System.in);
+		System.out.println("ENTER A NUMBER");
+		int n=sc.nextInt();
+		System.out.println("THE SUM OF ALL THE DIGITS IS: "+sum(n));
+	}
+	static int sum(int n) {
+		int rem=n%10;
+		if(n<=0) {
+			return 0;
+		}
+		return rem+sum(n/10);
+	}
+
+}
