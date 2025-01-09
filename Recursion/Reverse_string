@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Recursion_reverse_string {
+  public static void main(String[] args) {
+	  Scanner sc= new Scanner(System.in);
+	  System.out.println("ENTER YOUR NAME");
+	  String name=sc.next();
+	  System.out.println("THE REVERSE IS: "+rev(name));
+  }
+   static String rev(String name) {
+	   if(name.length()==0) {
+		   return "";
+	   }
+	   return name.charAt(name.length()-1)+""+rev(name.substring(0,name.length()-1)+"");
+   }
+}
