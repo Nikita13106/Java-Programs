@@ -1,0 +1,20 @@
+import java.util.Arrays;
+public class Recursion_Binary_Search {
+	public static void main(String[] args) {
+		int[] arr= {3,5,7,8,9};
+		int target=5;
+		System.out.println(sort(arr,target,0,arr.length-1));
+	}
+	static int sort(int[] arr,int target,int s,int e) {
+		if(s>e) {
+			return -1;
+		}
+		int mid=s+(e-s)/2;
+		if(target==arr[mid]) 
+			return mid;
+		else if(target>arr[mid]) 
+			return sort(arr,target,mid+1,e);
+		else 
+			return sort(arr,target,s,mid-1);
+	}
+}
