@@ -1,0 +1,17 @@
+// TO FIND IF ARRAY IS SORTED OR NOT
+import java.util.Arrays;
+public class Recursion_array_sorted_or_not {
+     public static void main(String[] args) {
+    	 int[] arr= {0,0,1,0,0,0};
+    	 System.out.println(sort(arr,0));
+    	 
+     }
+     static boolean sort(int[] arr,int index) {
+    	 if(index>=arr.length-1)
+    		 return true;
+     if(arr[index]<=arr[index+1]) {
+    return sort(arr,index+1);}
+     else
+    	 return false;
+     }
+}
