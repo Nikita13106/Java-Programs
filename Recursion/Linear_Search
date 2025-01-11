@@ -1,0 +1,17 @@
+// LINEAR SEARCH USING RECURSION IN WHICH THERE IS NOT MULTIPLE OCCURENCE OF A ELEMENT
+import java.util.Arrays;
+public class Recursion_Linear_Search {
+    public static void main(String[] args) {
+    	int[] arr= {3,5,2,7,8};
+    	int target=1;
+    	System.out.println(search(arr,target,0));
+    }
+    static int search(int[] arr,int target,int index) {
+    	if(index>=arr.length)
+    		return -1;
+    	if(arr[index]==target)
+    		return index;
+    	else
+    		return search(arr,target,index+1);
+    }
+}
