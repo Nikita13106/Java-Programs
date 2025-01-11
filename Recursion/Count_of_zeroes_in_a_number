@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Recursion_count_of_zeroes_in_a_number {
+      public static void main(String[] args) {
+    	  Scanner sc=new Scanner(System.in);
+    	  int count=0;
+    	  System.out.println("ENTER A NUMBER");
+    	  int n=sc.nextInt();
+    	  System.out.println(zero(n,count));
+      }
+      static int zero(int n,int count) {
+    	if(n==0)
+    		return count;
+      if(n%10==0)
+    	  count++;
+      return zero(n/10,count);
+}
+}
