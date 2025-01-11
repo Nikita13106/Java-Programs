@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Recursion_reverse_a_number {
+   public static void main(String[] args) {
+	  int sum=0;
+	   Scanner sc=new Scanner(System.in);
+	   System.out.println("ENTER A NUMBER");
+	   int n=sc.nextInt();
+	   int digits=(int) Math.log10(n)+1;
+	   System.out.println("THE REVERSE IS: "+rev1(n));
+	   System.out.println("THE REVERSE IS: "+rev2(n,sum));
+	   System.out.println("THE REVERSE IS: "+rev3(n,digits));
+   }
+    static String rev1(int n) {   // USING STRING
+	   if(n%10==n)
+		   return n+"";
+	   return (n%10)+""+rev1(n/10);
+   }
+   static int rev2(int n,int sum) {  //USING ANOTHER VARIABLE SUM
+	   if(n==0) {
+		   return sum;}
+	    int rem=n%10;
+	   sum=sum*10+rem;
+	   return rev2(n/10,sum);
+   }
+   static int rev3(int n,int digits) { //USING ANOTHER LOGIC FOR EXAMPLE IF NUMBER IS 123 THEN (3*100+2*10+1) AND IN THIS 100 IS 10 RAISE TO 2 AND WE ARE DOING IT BY POWER FUNCTION IN WHICH BASE IS 10 AND EXPONENT IS TOTAL NUMBER OF DIGITS-1 SO BY THIS WE GET 100 AND WE CAN DO IT FOR ANY NUMBER
+	   if(n%10==n) {
+		   return n;
+	   }
+	   return (int) (n%10*Math.pow(10,digits-1)+rev3(n/10,digits-1));
+   }
+}
