@@ -1,0 +1,22 @@
+//https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/description/
+// TO FIND NUMBER OF STEPS TO MAKE A NUMBER ZERO.IF THE NUMBER IS EVEN,DIVIDE BY 2 ELSE SUBTRACT BY 1 IF IT IS ODD
+import java.util.Scanner;	
+public class Recursion_no_of_steps {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int steps=0;
+		System.out.println("ENTER A NUMBER");
+		int n=sc.nextInt();
+		System.out.println(steps(n,steps));
+	}
+	static int steps(int n,int steps) {
+		if(n==0) {
+			return steps;
+		}
+		if(n%2==0)
+			return steps(n/2,steps+1);
+		else
+			return steps(n-1,steps+1);
+	}
+
+}
