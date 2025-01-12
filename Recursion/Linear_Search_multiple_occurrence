@@ -1,0 +1,20 @@
+// TO FIND INDEX OF TARGET ELEMENT WHICH EXISTS MULTIPLE TIME
+import java.util.Arrays;
+import java.util.ArrayList;
+public class Recursion_Linear_Search_multiple_occurrence {
+   public static void main (String [] args){
+   int[] arr={2,3,5,4,3,2,6};
+   int target=2;
+   ArrayList<Integer> list=new ArrayList<>();
+   System.out.println(search(arr,target,0,new ArrayList<>()));
+}
+   static ArrayList search(int[] arr,int target,int index,ArrayList<Integer>list){
+   if(index>=arr.length)
+   return list;
+   if(arr[index]==target)
+   {
+   list.add(index);
+   }
+   return search(arr,target,index+1,list);
+  }
+}
