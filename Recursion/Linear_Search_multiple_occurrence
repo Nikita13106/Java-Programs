@@ -8,7 +8,7 @@ public class Recursion_Linear_Search_multiple_occurrence {
    ArrayList<Integer> list=new ArrayList<>();
    System.out.println(search(arr,target,0,new ArrayList<>()));
 }
-   static ArrayList search(int[] arr,int target,int index,ArrayList<Integer>list){
+   static ArrayList <Integer> search(int[] arr,int target,int index,ArrayList<Integer>list){
    if(index>=arr.length)
    return list;
    if(arr[index]==target)
