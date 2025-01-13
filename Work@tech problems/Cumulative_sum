@@ -1,0 +1,17 @@
+//https://workat.tech/problem-solving/practice/cumulative-sum
+import java.util.Arrays;
+public class Cumulative_sum {
+    public static void main(String[] args) {
+    	int [] arr= {1,2,3,4,5,6};
+    	int sum=0;
+    	int[] narr=new int[arr.length];
+    	System.out.println(Arrays.toString(sum(arr,0,sum,narr)));
+    }
+    static int[] sum(int[] arr,int index,int sum,int[] narr) {
+    	if(index>=arr.length)
+    		return narr;
+        narr[index]=sum+arr[index];
+        sum=narr[index];
+        return sum(arr,index+1,sum,narr);
+    }
+}
