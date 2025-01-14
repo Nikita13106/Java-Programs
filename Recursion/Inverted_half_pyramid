@@ -1,0 +1,26 @@
+// TO PRINT INVERTED HALF PYRAMID OF LENGTH GIVEN BY USER FOR EXAMPLE FOR LENGTH 4
+//****
+//***
+//**
+//*
+import java.util.Scanner;
+public class Recursion_pattern_pyramid {
+  public static void main(String[] args) {
+	  Scanner sc=new Scanner(System.in);
+	  System.out.println("ENTER THE LENGTH OF PYRAMID");
+	  int len=sc.nextInt();
+	  star(len,1,len);
+  }
+  static void star(int r,int c,int len) {
+	  if(r==0)
+		  return;
+	  if(r>=c) {
+		  System.out.print("*");
+	      star(r,c+1,len);
+	      }
+	      else {
+	      System.out.println();
+	      star(r-1,1,len);
+	      }
+  }
+}
