@@ -1,0 +1,28 @@
+https://workat.tech/problem-solving/practice/positive-cumulative-sum
+import java.util.ArrayList;
+import java.util.Arrays;
+public class Positive_cumulative_sum {
+   public static void main(String[] args) {
+	   int[] arr= {1,-2,3,4,-6};
+	   int[] narr=new int[arr.length];
+	   int[] ans=sum(arr,0,0,narr);
+	   System.out.println("CUMULATIVE SUM: "+(Arrays.toString(ans)));
+	   ArrayList<Integer> list=new ArrayList<>();
+	   System.out.println("POSITIVE CUMULATIVE SUM: "+(pcs(ans,0,new ArrayList<>())));
+	   
+   }
+   static int[] sum(int[] arr,int index,int sum,int[] narr) {
+	   if(index>=arr.length)
+		   return narr;
+	   narr[index]=sum+arr[index];
+	   sum=narr[index];
+	   return sum(arr,index+1,sum,narr);
+   }
+   static ArrayList<Integer> pcs(int[] ans,int index,ArrayList<Integer>list){
+	   if(index>=ans.length)
+		   return list;
+	   if(ans[index]>0)
+		   list.add(ans[index]);
+	   return pcs(ans,index+1,list);
+   }
+}
