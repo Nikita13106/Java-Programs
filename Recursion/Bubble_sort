@@ -1,0 +1,24 @@
+import java.util.Arrays;
+public class Recursion_Bubble {
+   public static void main(String[] args) {
+	int[] arr= {-5,-7,7,5,2,4,-8};
+	sort(arr,1,0);
+	System.out.println(Arrays.toString(arr));
+}
+   static void sort(int[] arr,int index,int i) {
+	   if(i>=arr.length-1)  // end of all the passes means that the array is sorted
+		   return;
+	   if(index==arr.length-i) {  // end of one pass
+		   index=1;
+	       i++;
+	       }
+	   if(arr[index-1]>arr[index]) {  //swap
+		   int temp=arr[index-1];
+		   arr[index-1]=arr[index];
+		   arr[index]=temp;
+		   sort(arr,index+1,i);
+	   }
+	   else
+		   sort(arr,index+1,i);  // incrementing the inner loop index 
+   }
+}
