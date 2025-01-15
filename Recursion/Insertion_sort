@@ -1,0 +1,26 @@
+import java.util.Arrays;
+public class Insertion_sort{
+    public static void main (String [] args){
+        int[] arr={4,3,2,8,6};
+        sort(arr,1);
+        System.out.println(Arrays.toString(arr));
+    }
+    static void sort(int[] arr,int index){
+        if(index==arr.length)
+        return;
+        if(index>0)
+            {
+            if(arr[index]<arr[index-1])
+                {
+                int temp=arr[index];
+                arr[index]=arr[index-1];
+                arr[index-1]=temp;
+                sort(arr,index-1);
+                }
+                else
+                sort(arr,index+1);
+                }
+          else
+            sort(arr,index+1);
+        }
+    }
