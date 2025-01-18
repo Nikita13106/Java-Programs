@@ -1,0 +1,31 @@
+import java.util.Arrays;
+public class Recursion_selection_sort {
+    public static void main(String[] args) {
+        int[] arr = {2, 5, -5, 3, 1, 2, 4, 3, 2};
+        int max = 0;
+        // Calling the recursive selection sort method 
+        int[] ans = ans(arr, max, arr.length);
+        System.out.println(Arrays.toString(ans));
+  }
+     // max - the index of the maximum element in the current pass
+     // pass - the number of elements left to sort in the array
+    static int[] ans(int[] arr, int max, int pass) {
+        // Base case
+        if (pass <= 1) {
+            return arr;
+        }
+        // Loop to find the maximum element in the current pass
+        for (int i = 1; i < pass; i++) {
+            if (arr[max] < arr[i]) {
+                max = i; // Update the index of the maximum element
+            }
+        }
+        // Swap the maximum element with the last element in the current unsorted portion
+        int temp = arr[max];
+        arr[max] = arr[pass - 1];
+        arr[pass - 1] = temp;
+        // After the swap, the largest element is correctly placed at the end of the unsorted portion
+        // Recursively call the function for the remaining unsorted portion of the array
+        return ans(arr, 0, pass - 1);
+    }
+}
